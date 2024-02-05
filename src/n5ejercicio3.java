@@ -5,7 +5,11 @@ import java.util.Arrays;
 public class n5ejercicio3 {
     public static void main(String[] args) {
 
-        File directorio = new File("C:\\Temp\\");
+        Scanner myObj = new Scanner(System.in);
+
+        System.out.println("Introduce la línea de comandos:");
+        String datoString = myObj.nextLine();
+        File directorio = new File(datoString);
 
         leerDirectorio.leerCarpetas(directorio);
         leerDirectorio.generarArchivoTxt(directorio, "informacionDirectorio.txt");
